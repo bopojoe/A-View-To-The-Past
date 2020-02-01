@@ -13,7 +13,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return url as QLPreviewItem
 }
     
-//    var isComplete: Bool = false
+   
+    
+    
+    //    var isComplete: Bool = false
 //    var first:Bool = true
     
     @IBOutlet var collectionView: UICollectionView!
@@ -24,8 +27,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBarItems()
+        
         for model in models {
-           
             if let thumbnail = UIImage(named: "\(model).jpg") {
                 thumbnails.append(thumbnail)
                 print("here \(model)")
@@ -40,6 +44,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.reloadData()
 //        }
     }
+    
+    
+ 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return models.count

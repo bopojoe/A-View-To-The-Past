@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		2E31C74923C2EDB600A6F26D /* donut.reality in Resources */ = {isa = PBXBuildFile; fileRef = 2E31C73C23C2EDB600A6F26D /* donut.reality */; };
 		2E31C74A23C2EDB600A6F26D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E31C73E23C2EDB600A6F26D /* LaunchScreen.storyboard */; };
 		2E31C74B23C2EDB600A6F26D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E31C74023C2EDB600A6F26D /* Main.storyboard */; };
+		2EB9D27323E5999000003FBE /* NavBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9D27223E5999000003FBE /* NavBarExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2E31C73C23C2EDB600A6F26D /* donut.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = donut.reality; sourceTree = "<group>"; };
 		2E31C73F23C2EDB600A6F26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E31C74123C2EDB600A6F26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		2EB9D27223E5999000003FBE /* NavBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				2E31C73A23C2EDB600A6F26D /* Models */,
 				2E31C73623C2EDB600A6F26D /* ODRManager.swift */,
 				2E31C73523C2EDB600A6F26D /* ViewController.swift */,
+				2EB9D27223E5999000003FBE /* NavBarExtension.swift */,
 			);
 			path = "A View To The Past";
 			sourceTree = "<group>";
@@ -129,7 +132,7 @@
 				};
 			};
 			buildConfigurationList = 2E31C71823C2ED3900A6F26D /* Build configuration list for PBXProject "A View To The Past" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -170,6 +173,7 @@
 				2E31C74323C2EDB600A6F26D /* ViewController.swift in Sources */,
 				2E31C74523C2EDB600A6F26D /* LibraryCollectionViewCell.swift in Sources */,
 				2E31C74423C2EDB600A6F26D /* ODRManager.swift in Sources */,
+				2EB9D27323E5999000003FBE /* NavBarExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
