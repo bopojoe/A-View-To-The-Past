@@ -2,6 +2,8 @@
 import UIKit
 import Foundation
 import QuickLook
+import SpriteKit
+
  
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, QLPreviewControllerDelegate, QLPreviewControllerDataSource {
     func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
@@ -14,9 +16,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 }
     
    
-    
-    
-    //    var isComplete: Bool = false
+    let nav = NavBar()
+  
+       var isComplete: Bool = false
 //    var first:Bool = true
     
     @IBOutlet var collectionView: UICollectionView!
@@ -27,7 +29,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBarItems()
+        nav.setupNavBarItems()
         
         for model in models {
             if let thumbnail = UIImage(named: "\(model).jpg") {
@@ -86,17 +88,36 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //
 //                                           rootViewController.present(controller, animated: true)
 //                     })
-//                 DispatchQueue.main.asyncAfter(deadline: .now() + 22.0) { // Change `2.0` to the desired number of seconds.
-//                    if self.isComplete {
-//                        print("in here and isComplete is \(self.isComplete)")
-              let previewController = QLPreviewController()
-              previewController.dataSource = self
-              previewController.delegate = self
-              self.present(previewController, animated: true)
-//          }else{
-//             print("downloading")
-//          }
+        
+//        let request = NSBundleResourceRequest(tags: [self.models[self.thumbnailIndex]])
+//        request.beginAccessingResources { (error) in
+//        print("problem james")
+//        }
+
+                    if self.isComplete {
+                        print("in here and isComplete is \(self.isComplete)")
+        
+        //code to show ar view on press
+            let previewController = QLPreviewController()
+                        previewController.dataSource = self
+                        previewController.delegate = self
+                        self.present(previewController, animated: true)
+          }else{
+             print("downloading")
+                           func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+                              let url = Bundle.main.url(forResource: self.models[self.thumbnailIndex], withExtension: "reality")!
+                                return url as QLPreviewItem
+                        }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15.0) { // Change `2.0` to the desired number of seconds.
+                       let previewController = QLPreviewController()
+                                   previewController.dataSource = self
+                                   previewController.delegate = self
+                                   self.present(previewController, animated: true)
+                        }
+          }
 //}
+       
+        
        
 }
 
