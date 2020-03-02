@@ -10,4 +10,6 @@ target 'A View To The Past' do
  pod 'Firebase/Firestore'
  pod 'Firebase/Storage'
  pod 'Firebase/Database'
+ pod 'GoogleMaps'
+ pod 'GooglePlaces'
 end
