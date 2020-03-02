@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>511167822434-auni3nuo8fqspam1vg0g2eibs3hq18bd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.511167822434-auni3nuo8fqspam1vg0g2eibs3hq18bd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD0pFISO6wzyCdMZt3rWEjkI8-llbcUqhg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>511167822434</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>games.jamesdev.avttp</string>
+	<key>PROJECT_ID</key>
+	<string>iosappfyp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>iosappfyp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:511167822434:ios:2e41c24681428f260eaf3b</string>
+	<key>DATABASE_URL</key>
+	<string>https://iosappfyp.firebaseio.com</string>
+</dict>
+</plist>
