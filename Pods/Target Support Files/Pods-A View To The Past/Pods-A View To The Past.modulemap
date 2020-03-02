@@ -1,0 +1,6 @@
+framework module Pods_A_View_To_The_Past {
+  umbrella header "Pods-A View To The Past-umbrella.h"
+
+  export *
+  module * { export * }
+}
