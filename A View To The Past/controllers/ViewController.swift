@@ -12,13 +12,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
       let url = Bundle.main.url(forResource: self.models[self.thumbnailIndex], withExtension: "reality")!
+        print(url)
         return url as QLPreviewItem
 }
     
    
     let nav = NavBar()
+    
+    var locationPressed = ""
   
-       var isComplete: Bool = false
+       var isComplete: Bool = true
 //    var first:Bool = true
     
     @IBOutlet var collectionView: UICollectionView!
@@ -47,7 +50,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController  = segue.destination as! DetailViewController
+        viewController.locationName = self.locationPressed
+    }
  
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -77,6 +83,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     thumbnailIndex = indexPath.item
+    locationPressed = "\(self.models[self.thumbnailIndex])"
+        print(locationPressed)
+        performSegue(withIdentifier: "toDetailView", sender: self)
 //        first = false
 //      ODRManager.shared.requestSceneWith(tag: "\(self.models[self.thumbnailIndex])", onSuccess: {
 //                                            print("success")
@@ -123,7 +132,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //                                   previewController.delegate = self
 //                                   self.present(previewController, animated: true)
 //                        }
-//          }
+////          }
 }
        
         

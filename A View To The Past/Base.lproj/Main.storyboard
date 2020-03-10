@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Ss-bw-P0c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lag-Qm-WFA">
     <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -70,7 +70,6 @@
                                         <connections>
                                             <outlet property="modelThumbnail" destination="S7V-Aw-Jm4" id="tlg-Od-eyZ"/>
                                             <outlet property="modelTitle" destination="XpE-Nv-kKI" id="DtW-wK-3rz"/>
-                                            <segue destination="QoN-dc-fk1" kind="show" id="7ka-zB-uIN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -88,6 +87,7 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="ET2-Vo-ebj"/>
                     <connections>
                         <outlet property="collectionView" destination="OWB-N2-x5s" id="tAx-FA-e2t"/>
+                        <segue destination="QoN-dc-fk1" kind="show" identifier="toDetailView" id="zjG-cV-6iK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,15 +132,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DM-Ux-Hw4" customClass="ArViewButton">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DM-Ux-Hw4">
                                 <rect key="frame" x="471" y="748" width="326.5" height="222"/>
-                                <accessibility key="accessibilityConfiguration">
+                                <accessibility key="accessibilityConfiguration" identifier="arButton">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
                                 <viewLayoutGuide key="safeArea" id="lnD-3o-L25"/>
                                 <state key="normal" image="ARKit-Badge"/>
                                 <connections>
-                                    <segue destination="bqG-mR-6Jv" kind="show" id="5ce-PI-h4X"/>
+                                    <action selector="arButton:" destination="QoN-dc-fk1" eventType="touchUpInside" id="hqG-w2-HdM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Augmented Reality View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkB-fU-doN">
@@ -198,6 +198,10 @@
                         <viewLayoutGuide key="safeArea" id="VO3-rr-gZ6"/>
                     </view>
                     <navigationItem key="navigationItem" id="A3M-UB-vMT"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="bqG-mR-6Jv" kind="show" identifier="toARView" id="NXn-Fh-sI9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiw-UZ-QkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

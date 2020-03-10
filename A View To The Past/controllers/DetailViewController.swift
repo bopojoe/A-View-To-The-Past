@@ -13,4 +13,19 @@ import Foundation
 import QuickLook
 import SpriteKit
 class DetailViewController: UIViewController {
+
+    var locationName = ""
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController  = segue.destination as! ARViewController
+        viewController.ARview = self.locationName
+    }
+    
+    @IBAction func arButton(_ sender: Any) {
+        performSegue(withIdentifier: "toARView", sender: self)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("in location: ", locationName)
+    }
 }
