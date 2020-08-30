@@ -3,9 +3,16 @@ import UIKit
 import Foundation
 import QuickLook
 import SpriteKit
+import FirebaseStorage
+import Firebase
 
  
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, QLPreviewControllerDelegate, QLPreviewControllerDataSource {
+    
+    let storage = Storage.storage()
+    let db = Firestore.firestore()
+    
+    
     func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
             return 1
     }
@@ -27,8 +34,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet var collectionView: UICollectionView!
     let models = ["donut","cup"]
     
+    
     var thumbnails = [UIImage]()
     var thumbnailIndex = 0
+    
+    func loadLocations() {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

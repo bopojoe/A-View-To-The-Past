@@ -14,12 +14,21 @@ import GoogleMaps
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    
+    // this is here to make sure firebase and google are inited before use
+    override init() {
+    super.init()
+    FirebaseApp.configure()
+    GMSServices.provideAPIKey(ApiKeys.googleMapsApiKey)
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
-        GMSServices.provideAPIKey(ApiKeys.googleMapsApiKey                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          )
+        
+        
+        
+        
         return true
     }
 
