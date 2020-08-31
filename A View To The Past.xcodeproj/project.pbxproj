@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A424E5E24FD0D4D00F9FA58 /* tower.reality in Resources */ = {isa = PBXBuildFile; fileRef = 1A424E5D24FD0D4D00F9FA58 /* tower.reality */; };
 		1AE1E708241BBFC40046ACA9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE1E707241BBFC40046ACA9 /* Keys.swift */; };
 		2E0B3D49240BEF7E00A0F4C7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E29582D240BEB2700870BB6 /* LoginViewController.swift */; };
 		2E0B3D4B240C008500A0F4C7 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B3D4A240C008500A0F4C7 /* MainNavigationController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A424E5D24FD0D4D00F9FA58 /* tower.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = tower.reality; sourceTree = "<group>"; };
 		1AE1E707241BBFC40046ACA9 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2E0B3D4A240C008500A0F4C7 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		2E29582D240BEB2700870BB6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		2E31C73A23C2EDB600A6F26D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A424E5D24FD0D4D00F9FA58 /* tower.reality */,
 				2E31C73B23C2EDB600A6F26D /* cup.reality */,
 				2E31C73C23C2EDB600A6F26D /* donut.reality */,
 			);
@@ -217,6 +220,7 @@
 				2E31C74223C2EDB600A6F26D /* Assets.xcassets in Resources */,
 				2E31C74B23C2EDB600A6F26D /* Main.storyboard in Resources */,
 				2E31C74A23C2EDB600A6F26D /* LaunchScreen.storyboard in Resources */,
+				1A424E5E24FD0D4D00F9FA58 /* tower.reality in Resources */,
 				2E31C74923C2EDB600A6F26D /* donut.reality in Resources */,
 				2EFD80FD240C473400AEB350 /* GoogleService-Info.plist in Resources */,
 			);

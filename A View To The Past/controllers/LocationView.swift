@@ -53,8 +53,7 @@ class LocationView: UIViewController,  CLLocationManagerDelegate{
     // Creates a marker in the center of the map.
     
     marker.position = loc
-    marker.title = "Sydney"
-    marker.snippet = "Australia"
+    marker.title = "You Are Here"
     marker.map = mapView
   }
     

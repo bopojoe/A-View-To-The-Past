@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //    var first:Bool = true
     
     @IBOutlet var collectionView: UICollectionView!
-    let models = ["donut","cup"]
+    let models = ["donut","cup","tower"]
     
     var thumbnails = [UIImage]()
     var thumbnailIndex = 0
